@@ -8,10 +8,10 @@ if __name__ == "__main__":
         if "gitignore" not in dbf_file:
             dbfPath = "dbf/"+dbf_file
             dbfname = dbf_file.split(".")[0]
-            print(dbfname+" in progress...")
+            print(dbfname+"conversion in progress...")
             csvPath = os.getcwd()+"\csv"
             df = Dbf5(dbfPath).to_dataframe()
             path = csvPath+f"\{dbfname}" +".csv"
             df.to_csv(path)
-    print("Successfully converted to .csv!")
+    print("Successfully converted files to .csv!")
 
